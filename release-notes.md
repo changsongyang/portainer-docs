@@ -2,6 +2,50 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.1 LTS
+
+August 27, 2025
+
+### Known issues
+
+* On Async Edge environments an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### Changes
+
+* Fixed an issue where the environment status was not updating in a timely fashion for Standard Edge Agent
+* Fixed an issue where the `--tlscert` and `--tlskey` CLI options did not work unless `--sslcert` and `--sslkey` were also provided
+* Fixed an issue where Edge Stacks with GitOps enabled were not being updated correctly
+* Fixed an issue where the container engine defaulted to Docker when associating the first Kubernetes environment
+* Fixed an issue preventing updates from being scheduled when another update was already in progress
+* Fixed an issue with upgrading Kubernetes version or Talos version for Omni managed environments
+* Removed the requirement for authentication when using the SMTP alert notification type
+* Fixed an issue where users were unable to deploy a stack from a private repository when Git credentials were entered manually
+* Resolved the following CVEs:
+  * CVE-2025-22871
+  * CVE-2025-22868
+  * CVE-2025-22869
+  * CVE-2025-4673
+  * CVE-2024-45341
+  * CVE-2024-45336
+  * CVE-2025-0913
+  * CVE-2024-45338
+  * CVE-2025-22872
+  * CVE-2024-40635
+  * CVE-2025-22870
+  * CVE-2025-22866
+  * CVE-2025-54410
+  * GHSA-2464-8j7c-4cjm
+
 ## Release 2.33.0 LTS
 
 August 20, 2025
