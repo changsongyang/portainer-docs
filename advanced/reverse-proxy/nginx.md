@@ -93,7 +93,7 @@ Once the deployment has finished you can browse `portainer.yourdomain.com`.
 Deploying Portainer in Docker Swarm behind nginx has similar steps to the Docker Standalone scenario. Before deploying, you need to create two elements: networks and volumes.
 
 {% hint style="warning" %}
-This deployment assumes you are running one manager node. If you are using multiple managers we advise [reading this knowledge base article](https://portal.portainer.io/knowledge/how-can-i-ensure-portainers-configuration-is-retained) before proceeding.
+This deployment assumes you are running one manager node. If you are using multiple managers we advise [reading this article](../../faqs/installing/how-can-i-ensure-portainers-configuration-is-retained.md) before proceeding.
 {% endhint %}
 
 First, create two networks:

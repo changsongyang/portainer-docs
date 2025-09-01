@@ -14,11 +14,11 @@ Portainer Business Edition requires a license key to install and use. If you don
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
-Our team is here to help you on your journey. Community and five/three nodes free users can get assistance through our [community support channels](./#community-edition), and paid Business customers through our [business support channels](./#business-edition).
+Our team is here to help you on your journey. Community and five/three nodes free users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users), and paid Business customers through our [business support channels](./#business-edition-customers).
 
 ## Documentation
 
-We're working hard to ensure that our documentation keeps up with our ever-growing Portainer community. If you have a question we encourage you to start with the documentation (right here!). If you can't find what you're looking for, please visit our [Knowledge Base](https://portal.portainer.io/knowledge) or one of our support channels.&#x20;
+We're working hard to ensure that our documentation keeps up with our ever-growing Portainer community. If you have a question we encourage you to start with the documentation (right here!). If you can't find what you're looking for, please raise a question in one of our [support channels](./#getting-support).&#x20;
 
 For more detailed step-by-step guides to Portainer, we're building out the [Portainer Academy](https://academy.portainer.io) with more courses regularly.
 

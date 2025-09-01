@@ -17,5 +17,3 @@ The information displayed in Portainer for your Edge device is up to date as of 
 From here, you can browse the device as you would a regular environment.
 
 <figure><img src="../../.gitbook/assets/2.33-snapshot-browse.gif" alt=""><figcaption></figcaption></figure>
-
-a

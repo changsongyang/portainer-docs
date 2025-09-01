@@ -23,7 +23,7 @@ The installation instructions also make the following assumptions about your env
 * You are accessing Docker via Unix sockets. Alternatively, you can also connect via TCP.
 * SELinux is disabled within the Linux distribution used by WSL.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
-* You are running a single manager node in your swarm. If you have more than one, please [read this knowledge base article](https://portal.portainer.io/knowledge/how-can-i-ensure-portainers-configuration-is-retained) before proceeding.
+* You are running a single manager node in your swarm. If you have more than one, please [read this article](../../../../faqs/installing/how-can-i-ensure-portainers-configuration-is-retained.md) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
 ## Deployment
