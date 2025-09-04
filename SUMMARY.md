@@ -378,6 +378,7 @@
   * [Why is my Portainer Edge Agent using a large amount of memory](faqs/troubleshooting/why-is-my-portainer-edge-agent-using-a-large-amount-of-memory.md)
   * [“Failed logging user activity” error in Portainer](faqs/troubleshooting/failed-logging-user-activity-error-in-portainer.md)
   * [Unable to Authenticate After Portainer Update](faqs/troubleshooting/unable-to-authenticate-after-portainer-update.md)
+  * [How do I recover orphaned stacks from a previously deleted environment?](faqs/troubleshooting/how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md)
 * [Contributing](faqs/contributing/README.md)
   * [How do I report a bug?](faqs/contributing/how-do-i-report-a-bug.md)
   * [How do I raise a feature request?](faqs/contributing/how-do-i-raise-a-feature-request.md)
