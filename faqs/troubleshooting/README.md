@@ -42,3 +42,5 @@ description: >-
 * [Why is my Portainer Edge Agent using a large amount of memory](why-is-my-portainer-edge-agent-using-a-large-amount-of-memory.md)
 * [“Failed logging user activity” Error in Portainer](failed-logging-user-activity-error-in-portainer.md)
 * [Unable to Authenticate After Portainer Update](unable-to-authenticate-after-portainer-update.md)
+* [How do I recover orphaned stacks from a previously deleted environment? ](how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md)
+* [How do I change the way I connect to an environment without losing my existing stacks?](how-do-i-change-the-way-i-connect-to-an-environment-without-losing-my-existing-stacks.md)

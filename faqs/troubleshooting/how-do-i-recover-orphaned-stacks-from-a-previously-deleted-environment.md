@@ -4,7 +4,7 @@ Stacks from an environment that has been deleted will be labelled as orphaned st
 
 
 
-1. Within the environment that you want to associate your orphaned stacks with, open the stacks list and click on the three dots in the top right corner, select **Show all orphaned stacks**. Your stack list will then update to include any orphaned stacks.
+1. Within the environment that you want to associate your orphaned stacks with, click **Stacks** in the left hand menu. At the Stacks list, click on the three dots in the top right corner and select **Show all orphaned stacks**. Your stack list will then update to include any orphaned stacks.
 
 <div align="left"><figure><img src="../../.gitbook/assets/orphaned stacks selection.png" alt=""><figcaption></figcaption></figure></div>
 
