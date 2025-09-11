@@ -278,7 +278,7 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       - --providers.docker=true
-      - --providers.docker.swarmMode=true
+      - --providers.swarm=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=public
       - --api
@@ -292,7 +292,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:sts
+    image: portainer/agent:lts
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -310,7 +310,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:sts
+    image: portainer/portainer-ce:lts
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
