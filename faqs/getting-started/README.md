@@ -14,4 +14,5 @@ description: >-
 * [Which is more secure, the Agent or the Edge Agent?](which-is-more-secure-the-agent-or-the-edge-agent.md)
 * [What does Portainer's backup include?](what-does-portainers-backup-include.md)
 * [How does Portainer respond to CVEs?](how-does-portainer-respond-to-cves.md)
+* [Can Portainer’s interface language be changed?](can-portainers-interface-language-be-changed.md)
 
