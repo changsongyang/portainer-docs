@@ -6,11 +6,11 @@ Stacks from an environment that has been deleted will be labelled as orphaned st
 
 1. Within the environment that you want to associate your orphaned stacks with, click **Stacks** in the left hand menu. At the Stacks list, click on the three dots in the top right corner and select **Show all orphaned stacks**. Your stack list will then update to include any orphaned stacks.
 
-<div align="left"><figure><img src="../../.gitbook/assets/orphaned stacks selection.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/orphaned stacks selection.png" alt=""><figcaption></figcaption></figure></div>
 
 2. Click into the stack that you want to recover, and select **Associate.**
 
-<figure><img src="../../.gitbook/assets/associate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/associate.png" alt=""><figcaption></figcaption></figure>
 
 Your stack will now appear in your stack list with total control. Repeat this process for each stack you want to reassociate.
 

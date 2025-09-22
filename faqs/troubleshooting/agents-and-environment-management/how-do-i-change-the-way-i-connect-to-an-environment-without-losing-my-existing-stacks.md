@@ -12,13 +12,13 @@ In the case of changing the way you connect to an environment (for example by mo
 
 Under **Administration**, navigate to **Environment-related**, then to **Environments**. Select the environment you would like to remove and click **Remove.** The stacks in this environment will become orphaned, and therefore available to be re-associated once you re-add the environment in the next step.
 
-<figure><img src="../../.gitbook/assets/Remove env.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Remove env.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Adding a new environment using the new connection method
 
-[Add the environment again](../../admin/environments/add/) using the new connection method.
+[Add the environment again](../../../admin/environments/add/) using the new connection method.
 {% endstep %}
 
 {% step %}
@@ -26,11 +26,11 @@ Under **Administration**, navigate to **Environment-related**, then to **Environ
 
 Within the environment that you want to associate your orphaned stacks with, click **Stacks** in the left hand menu. At the Stacks list, click on the three dots in the top right corner and select **Show all orphaned stacks**. Your stack list will then update to include any orphaned stacks.
 
-<div align="left"><figure><img src="../../.gitbook/assets/orphaned stacks selection.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/orphaned stacks selection.png" alt=""><figcaption></figcaption></figure></div>
 
 Click into the stack that you want to recover, and select **Associate.**
 
-<div align="center"><figure><img src="../../.gitbook/assets/associate.png" alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/associate.png" alt=""><figcaption></figcaption></figure></div>
 
 Your stack will now appear in your stack list with total control. Repeat this process for each stack you want to re-associate.&#x20;
 {% endstep %}
