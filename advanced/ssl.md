@@ -12,7 +12,7 @@ When using your own externally-issued certificate, ensure that you include the f
 Portainer expects certificates in PEM format.
 {% endhint %}
 
-Use the `--sslcert` and `--sslkey` flags during installation.
+Use the `--tlscert` and `--tlskey` flags during installation.
 
 Upload your certificate (including the chain) and key to the server running Portainer, then start Portainer referencing them. The following command assumes your certificates are stored in `/path/to/your/certs` with the filenames `portainer.crt` and `portainer.key`, and bind-mounts the directory to `/certs` in the Portainer container:
 
@@ -25,8 +25,8 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
     portainer/portainer-ee:lts \
-    --sslcert /certs/portainer.crt \
-    --sslkey /certs/portainer.key
+    --tlscert /certs/portainer.crt \
+    --tlskey /certs/portainer.key
 ```
 {% endtab %}
 
@@ -38,8 +38,8 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
     portainer/portainer-ce:lts \
-    --sslcert /certs/portainer.crt \
-    --sslkey /certs/portainer.key
+    --tlscert /certs/portainer.crt \
+    --tlskey /certs/portainer.key
 ```
 {% endtab %}
 {% endtabs %}
@@ -56,8 +56,8 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ee:lts \
-    --sslcert /certs/live/yourdomain/fullchain.pem \
-    --sslkey /certs/live/yourdomain/privkey.pem
+    --tlscert /certs/live/yourdomain/fullchain.pem \
+    --tlskey /certs/live/yourdomain/privkey.pem
 ```
 {% endtab %}
 
@@ -70,8 +70,8 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ce:lts \
-    --sslcert /certs/live/yourdomain/fullchain.pem \
-    --sslkey /certs/live/yourdomain/privkey.pem
+    --tlscert /certs/live/yourdomain/fullchain.pem \
+    --tlskey /certs/live/yourdomain/privkey.pem
 ```
 {% endtab %}
 {% endtabs %}
@@ -83,8 +83,8 @@ When you're finished, you can navigate to `https://$ip-docker-host:9443`.
 To provide your own SSL certificate for Docker Swarm, simply define the `portainer.sslcert` and `portainer.sslkey` secrets, and the installation manifest will automatically detect and use them:
 
 ```
-docker secret create portainer.sslcert /path/to/your/certificate.crt
-docker secret create portainer.sslkey /path/to/your/certificate.key
+docker secret create portainer.tlscert /path/to/your/certificate.crt
+docker secret create portainer.tlskey /path/to/your/certificate.key
 ```
 
 Next, retrieve the stack YML manifest:

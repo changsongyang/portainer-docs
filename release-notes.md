@@ -2,6 +2,53 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.2 LTS
+
+September 25, 2025
+
+### Known issues
+
+* On Async Edge environments an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### Changes
+
+* Fixed an issue where Standard Users could not join a container to a network
+* Fixed an issue where the database encryption secret was incorrectly set
+* Fixed an issue with Kubernetes Access Control
+* Fixed an issue where GitOps webhook URLs could be reused
+* Improved Helm repository validation to align with the behavior of the CLI
+* Fixed an issue where the environment status filter did not properly handle the "Failed" state when used with Edge Stacks
+* Fixed an issue where registry list API was returning back passwords
+* Fixed a data race issue caused by the Kubernetes client
+* Fixed an issue where the GitOps interval could be set to less than one minute
+* Fixed an issue where the Edge stack for GitOps updates was not correctly saved to the edge agent’s stack folder
+* Fixed an issue where SMTP authentication settings were not properly applied to the internal Alertmanager configuration file
+* Fixed an issue where false-positive alerts were being triggered by the Backup alert rule
+* Fixed an issue where Activity Log exports were limited to 2,000 items and search functionality was not working correctly
+* Fixed an issue where invalid Docker Swarm warning shows up in Docker standalone environment
+* Fixed an issue where Helm values fails to load when the repo contains mixed media types
+* Bumped the following NPM dependencies to resolve vulnerabilities
+  * axios → 1.7
+  * coverage-v8 → \~2.1.9
+  * vitest → 2.1.9
+* Resolved the following CVEs
+  * CVE-2025-4676
+  * CVE-2025-47907
+
+### Deprecated and removed features
+
+* We have deprecated the `--sslcert` and `--sslkey` CLI options in favor of the `--tlscert` and `--tlskey` options respectively, and will be removing the `--sslcert` and `--sslkey` options in a future release.
+
 ## Release 2.33.1 LTS
 
 August 27, 2025

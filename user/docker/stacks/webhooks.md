@@ -1,6 +1,6 @@
 # Webhooks
 
-A webhook is a POST request sent to a URL that you define in Docker Hub or another registry. Use webhooks to trigger an action in response to an event such as a repository push.
+A webhook is a POST request sent to a specified URL in Docker Hub or another registry. Webhooks help automate actions in response to events like a repository push.
 
 {% hint style="info" %}
 This functionality is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=stack-webhook).
@@ -22,7 +22,7 @@ Scroll down to the **Webhooks** section and toggle the **Create a stack webhook*
 
 This example shows how to trigger the webhook using `redeploy`:
 
-```
+```html
 <form action="https://portainer:9443/api/stacks/webhooks/638e6967-ef77-4906-8af8-236800621360" method="post">
   Redeploy stack containers with latest image of same tag <input type="submit" />
 </form>
@@ -30,7 +30,7 @@ This example shows how to trigger the webhook using `redeploy`:
 
 This example shows how to trigger the webhook to update the stack to use a different image tag:
 
-```
+```html
 <form action="https://portainer:9443/api/stacks/webhooks/638e6967-ef77-4906-8af8-236800621360?tag=latest" method="post">
   Update stack container images with different tag <input type="submit" />
 </form>
@@ -38,13 +38,13 @@ This example shows how to trigger the webhook to update the stack to use a diffe
 
 ## Preventing a pull
 
-In some cases you may want to override the pulling of images when using the webhook to do a redeploy. In that scenario, you can specify `pullimage=false` as a parameter on your webhook to disable pulling of images.&#x20;
+By default, triggering a webhook pulls the latest image. If you want to redeploy without pulling a new image, use `pullimage=false` as a parameter on your webhook.&#x20;
 
 {% hint style="info" %}
 This option is only available in Portainer Business Edition.
 {% endhint %}
 
-```
+```html
 <form action="https://portainer:9443/api/stacks/webhooks/638e6967-ef77-4906-8af8-236800621360?pullimage=false" method="post">
   Update stack without pulling images <input type="submit" />
 </form>
@@ -70,4 +70,4 @@ services:
 
 ## Configuring the webhook in Docker Hub
 
-To finish the configuration, refer to [Docker's own documentation](https://docs.docker.com/docker-hub/webhooks/).
+To finish the configuration, refer to [Docker's official documentation](https://docs.docker.com/docker-hub/webhooks/) for guidance on configuring webhooks in Docker Hub.
