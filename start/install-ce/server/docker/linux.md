@@ -62,7 +62,7 @@ CONTAINER ID   IMAGE                        COMMAND        CREATED         STATU
 To install using Docker Compose, download the compose file using the following `curl` command:
 
 ```
-curl -L https://downloads.portainer.io/ce-lts/portainer-compose.yaml
+curl -L https://downloads.portainer.io/ce-lts/portainer-compose.yaml -o portainer-compose.yaml
 ```
 
 Alternatively, create a `portainer-compose.yaml` file with the following contents:
