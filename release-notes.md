@@ -2,6 +2,35 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.3 LTS
+
+October 30, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni&#x20;
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### **Changes**
+
+* Improved stability by attempting to compact using a read-only database&#x20;
+* Fixed an issue where WebSocket upgrade failed with Portainer generated `kubeconfig`&#x20;
+* Fixed an issue where a memory leak occurred during Kubernetes stack auto redeployment&#x20;
+* Fixed missing dependency versions displayed in the popup
+* Fixed an issue where adding a team access to a namespace threw a panic error
+* Fixed typos in Content-Security-Policy
+* Improved the Activity Logs Date and Time filter
+* Resolved CVE-2025-62725
+
 ## Release 2.33.2 LTS
 
 September 25, 2025
