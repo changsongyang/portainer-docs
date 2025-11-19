@@ -2,6 +2,45 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.4 LTS
+
+November 20, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni&#x20;
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### **Changes**
+
+* Fixed an issue of broken manual stack force deployment
+* Fixed an issue that caused the calendar widget to render incorrectly
+* Resolved the following CVEs:
+  * CVE-2024-25621
+  * CVE-2025-47913
+  * CVE-2025-47906
+  * CVE-2025-47910
+  * CVE-2025-47907
+  * CVE-2025-47912
+  * CVE-2025-58183
+  * CVE-2025-58185
+  * CVE-2025-58186
+  * CVE-2025-58187
+  * CVE-2025-58188
+  * CVE-2025-58189
+  * CVE-2025-61723
+  * CVE-2025-61724
+  * CVE-2025-61725
+
 ## Release 2.33.3 LTS
 
 October 30, 2025
@@ -70,7 +109,7 @@ September 25, 2025
   * axios → 1.7
   * coverage-v8 → \~2.1.9
   * vitest → 2.1.9
-* Resolved the following CVEs
+* Resolved the following CVEs:
   * CVE-2025-4676
   * CVE-2025-47907
 
