@@ -8,9 +8,8 @@ Welcome to Portainer's official documentation site.
 
 **Portainer Business Edition (BE)** is our commercial offering. With features geared towards businesses and larger organizations such as [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes, Podman and Azure ACI.
 
-{% hint style="info" %}
-Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request three nodes free](https://www.portainer.io/get-a-license) of Portainer Business Edition or [purchase a license](https://www.portainer.io/pricing).
-{% endhint %}
+> [!NOTE]
+> Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request three nodes free](https://www.portainer.io/get-a-license) of Portainer Business Edition or [purchase a license](https://www.portainer.io/pricing).
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
@@ -22,9 +21,8 @@ We're working hard to ensure that our documentation keeps up with our ever-growi
 
 For more detailed step-by-step guides to Portainer, we're building out the [Portainer Academy](https://academy.portainer.io) with more courses regularly.
 
-{% hint style="info" %}
-As an open source product we rely on users in our community to support one another by asking questions, engaging in discussions and sharing knowledge. Together with the documentation found on this site and our [YouTube channel](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg), we cover a lot of ground but there may be gaps.
-{% endhint %}
+> [!NOTE]
+> As an open source product we rely on users in our community to support one another by asking questions, engaging in discussions and sharing knowledge. Together with the documentation found on this site and our [YouTube channel](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg), we cover a lot of ground but there may be gaps.
 
 ## Getting support
 
