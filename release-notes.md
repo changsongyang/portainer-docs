@@ -2,6 +2,109 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.5 LTS <a href="#release-2.33.4-lts" id="release-2.33.4-lts"></a>
+
+November 27, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this Release
+
+* Added support for Docker v29
+
+#### Breaking change
+
+* Removed the optional raw snapshot response from some endpoint requests
+
+## Release 2.36.0 STS
+
+November 27, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this Release
+
+* Fixed an issue where Edge Stack GitOps Force Redeployment was not working
+* Fixed an issue where Edge Stacks deployed via Git Repository were not redeployed when a new commit was pushed and the GitOps update was triggered
+* Hid the Git credentials and PAT when the stored ones are being used
+* Added resiliency for power interruptions in the Async Edge Agent
+* Added Users and Environment filters for the Activity Logs
+* Added support for Helm Chart folders in the root Git directory
+* Fixed a nil pointer dereference when adding team accesses to namespaces in Kubernetes environments
+* Fixed Edge Stacks list inconsistent counts
+* Fixed the Edge Stack relations reconciliation when updating endpoint groups
+* Added the support for Kubernetes CRDs&#x20;
+* Fixed local development build scripts for community contributors with Apple M series chips
+* Improved ECR session management in the Agent
+* Added support for Docker v29
+* Improved the consistency for GitOps across different scenarios
+* Fixed the External label for Kubernetes environments
+* Fixed namespace selection in the registry access page
+* Improve the registry credential handling in compose files
+* Fixed CVEs in the password reset helper
+* Fixed the Prune services toggle for Swarm
+* Added a `--data-path` flag to the password reset helper
+* Fixed oversized custom icons in the templates view
+* Added an access token connection test for DockerHub before registry creation
+* Fixed the ability to uncheck filters after deleting filtered containers in the Container list view
+* Fixed the Insecure toggle for custom registries
+* Added the ability to rename Stacks
+* Fixed the date picker calendar to display the 7 days of the week without overflowing
+* Updated the privacy policy link
+* Added auto-onboarding script for Podman
+* Improved to display 'title' or 'tooltip' in all places that text is truncated in the UI
+* Fixed the navigation bar to display Portainer correctly
+* Fixed incorrect command syntax for Windows Edge agent deployment instructions
+* Fixed Helm install docs link
+* Fixed order of environment types
+* Resolved the following CVEs:
+  * CVE-2025-62725
+  * CVE-2024-25621
+  * CVE-2025-47913
+  * CVE-2025-47906
+  * CVE-2025-47910
+  * CVE-2025-47907
+  * CVE-2025-47912
+  * CVE-2025-58183
+  * CVE-2025-58185
+  * CVE-2025-58186
+  * CVE-2025-58187
+  * CVE-2025-58188
+  * CVE-2025-58189
+  * CVE-2025-61723
+  * CVE-2025-61724
+  * CVE-2025-61725
+  * CVE-2020-8911
+  * CVE-2020-8912
+
+### Deprecated and removed features
+
+* Deprecated OpenAMT support
+
 ## Release 2.33.4 LTS
 
 November 20, 2025
@@ -70,6 +173,53 @@ October 30, 2025
 * Improved the Activity Logs Date and Time filter
 * Resolved CVE-2025-62725
 
+## Release 2.35.0 STS
+
+October 16, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.&#x20;
+
+### New in this Release
+
+* Fixed a bug where the Edit Ingress page wasn’t displaying updated information immediately after making an update
+* Fixed an issue where GitOps webhook URLs could be reused
+* Fixed a data race issue caused by the Kubernetes client
+* Fixed an issue that caused a memory leak when redeploying a Kubernetes stack
+* Fixed an issue where the environment status filter did not properly handle the "Failed" state when used with Edge Stacks
+* Added support for IPV6 network configuration for IPvlan Docker networks
+* Added a new command flag `--compact-db` to allow database compaction on startup
+* Fixed typos in Content-Security-Policy
+* Added support for Helm GitOps allowing automatic upgrades based on changes to a Helm chart and/or Helm override files in a Git repository
+* Fixed an issue with access control when users attempted to view resources in namespaces they don’t have access to
+* Fixed an issue where WebSocket connections were not forwarded correctly to the Kubernetes API
+* Fixed missing dependency versions in popup
+* Fixed an error when deleting the last tag in a Github registry repository
+* Added a toggle "Always clone Git repository" under the Edge Stack relative path setting to enforce cloning the latest Git repository during each redeployment
+* Fixed an issue where the frontend proxied the registry tag list request with an encoded URL, which could cause a 404 error in certain Portainer server setups when listing registry tags
+* Added a new automatic patch update feature (disabled by default) to ensure Portainer stays secure and consistent without manual intervention. This mechanism automatically applies patch releases (e.g. _x.x.n_), reducing version fragmentation and improving supportability.
+* Added a help tooltip to the git Authorization type field
+* Fixed an error where updating Portainer in Swarm would lead to portainer-updater being unable to execute the update
+* Resolved the following CVEs:&#x20;
+  * CVE-2025-7783
+  * CVE-2022-37601
+  * CVE-2025-22868
+
+### Deprecated and removed features
+
+* None
+
 ## Release 2.33.2 LTS
 
 September 25, 2025
@@ -116,6 +266,62 @@ September 25, 2025
 ### Deprecated and removed features
 
 * We have deprecated the `--sslcert` and `--sslkey` CLI options in favor of the `--tlscert` and `--tlskey` options respectively, and will be removing the `--sslcert` and `--sslkey` options in a future release.
+
+## Release 2.34.0 STS
+
+September 18, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* It is not currently possible to upgrade either the Kubernetes or Talos versions under the Cluster settings page
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this release
+
+* Increased Content-Security-Policy restrictions
+* Added enforcement of a minimum polling interval value for GitOps
+* Fixed environment type detection for the image status indicator
+* Fixed an access control bug in Custom Templates
+* Fixed inaccurate display of healthy containers count in environment listing
+* Implemented higher priority for interactive database transactions over background processes like edge agent polling
+* Fixed a data race in the job scheduler
+* Removed the password from the response of the registry update request
+* Fixed a problem that prevented the deployment of stacks from private repositories when Git credentials were entered manually
+* Fixed a failure when deploying a stack that referred to multiple private registries under the same provider
+* Fixed the display of Edge Groups when the number of environments is high
+* Fixed the network connection to containers by Standard Users
+* Removed `mingit` binary from Windows images
+* Added `windows-2025` builds of the Portainer image
+* Fixed an inconsistency while adding new edge environments
+* Fixed Helm repository validation to match the library behavior
+* Improved the view for editing registry repositories
+* Fixed tab swapping in the Node details view
+* Fixed inconsistencies in the display of Namespace resource limits
+* Fixed Helm failures when the repository contains mixed media types
+* Fixed the browsing of custom registries when using public TLS certificates
+* Added support for shared credentials for Git operations
+* Fixed the resource request slider
+* Fixed the default DB encryption secret path
+* Changed the filename of the downloaded async edge stacks logs to include the date and environment name
+* Moved the Observability Alerting feature out of experimental:
+  * Fixed a panic error caused by attempting to re-enable the internal alert manager after it had been disabled (`duplicate metrics collector registration attempted`)
+  * Fixed an issue where disabling the notification channel toggle did not apply correctly
+  * Fixed a false-positive condition where a backup alert would fire even when the backup completed successfully
+  * Fixed the Environment Down alert rule not triggering correctly for Edge agents
+
+### Deprecated and removed features
+
+* None
 
 ## Release 2.33.1 LTS
 
