@@ -3,8 +3,7 @@
 Only Portainer Business (BE) customers with a Professional or Enterprise subscription can log tickets directly with Portainer. For all other users, we recommend our [community support resources](https://www.portainer.io/get-support-for-portainer?hsLang=en).
 
 \
-**How to log a support request:**\
-
+**How to log a support request:**<br>
 
 * Go to the [Get Support](https://www.portainer.io/get-support-for-portainer?hsLang=en) page on the Portainer website.
 * After reviewing the existing resources to see if your question has already been answered, scroll down to the **Get Business Edition Support** section and complete the form.

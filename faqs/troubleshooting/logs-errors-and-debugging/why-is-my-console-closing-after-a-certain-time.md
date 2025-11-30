@@ -16,8 +16,7 @@ proxy_read_timeout 3600;
 &#x20;\
 **Nginx Proxy Manager:**
 
-Edit the proxy host that you need to change and add `proxy_read_timeout 3600;` as below.\
-
+Edit the proxy host that you need to change and add `proxy_read_timeout 3600;` as below.<br>
 
 <figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 

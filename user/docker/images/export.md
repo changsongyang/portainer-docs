@@ -14,4 +14,4 @@ When the warning message appears, click **Continue**.
 
 <figure><img src="../../../.gitbook/assets/2.15-images-export-confirm.png" alt=""><figcaption></figcaption></figure>
 
-When the image has downloaded, a success message will appear, and your browser should automatically download the resulting tar file.\
+When the image has downloaded, a success message will appear, and your browser should automatically download the resulting tar file.<br>

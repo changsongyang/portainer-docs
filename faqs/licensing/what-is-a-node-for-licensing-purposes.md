@@ -26,7 +26,7 @@ In this scenario, Portainer is running in three places (one Server and two Agent
 
 Now, for Docker Swarm let's imagine a setup with one manager node (manager01) and two worker nodes (swarm01 and swarm02):
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/broken/files/aSrLWsspksJWMJAwUndl" alt=""><figcaption></figcaption></figure>
 
 Portainer Server is running on the manager node, and the agent is running on all three nodes across the swarm. Therefore, this would also require a 3 node license.
 

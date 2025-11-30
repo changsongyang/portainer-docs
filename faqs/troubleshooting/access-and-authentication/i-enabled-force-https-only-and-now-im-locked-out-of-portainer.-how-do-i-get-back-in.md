@@ -43,4 +43,4 @@ If you are unable to adjust the run command to include the command line option, 
 
 You should now be able to log in to Portainer using HTTP.
 
-\
+<br>

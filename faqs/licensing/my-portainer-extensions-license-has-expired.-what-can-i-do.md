@@ -22,4 +22,4 @@ If you have more than 3 nodes, please complete our [additional pricing request f
 
 We have [complete guides](../../start/upgrade/tobe/) on how to upgrade from 1.24.x to Portainer Business Edition for your platform.
 
-For more on why you should transition to Portainer Business Edition, we have a [blog post](https://www.portainer.io/blog/why-transition-to-portainer-business-from-portainer-extensions?hsLang=en) that goes into detail as to the benefits of doing so.\
+For more on why you should transition to Portainer Business Edition, we have a [blog post](https://www.portainer.io/blog/why-transition-to-portainer-business-from-portainer-extensions?hsLang=en) that goes into detail as to the benefits of doing so.<br>

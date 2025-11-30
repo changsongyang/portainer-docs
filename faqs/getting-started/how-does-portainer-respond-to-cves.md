@@ -4,8 +4,7 @@ description: In this article we'll talk about CVEs and how we respond to them at
 
 # How does Portainer respond to CVEs?
 
-The crucial points are:\
-
+The crucial points are:<br>
 
 * CVEs are reports of vulnerabilities in software.
 * CVEs are given a score (between 0.0 and 10.0) based on a number of criteria.
@@ -16,8 +15,7 @@ The crucial points are:\
 * Many reported CVEs in Portainer are actually in third-party binaries, which can slow down fix timeframes.
 * Some CVEs are submitted without enough information, and we can (and have) mark these as disputed.
 
-Below we'll go into more detail on each of the above points.\
-
+Below we'll go into more detail on each of the above points.<br>
 
 #### What is a CVE?
 

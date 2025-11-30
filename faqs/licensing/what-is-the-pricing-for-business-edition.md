@@ -98,4 +98,4 @@ Optional extra services:
 | **Portainer Professional Services (Services)** | Advanced services for consulting, implementation, configuration and support (hourly basis)                                                                                                                          |
 |  **Managed Platform  Services**                |  Portainer's managed platform services team will accelerate your containerization journey.                                                                                                                          |
 
-\
+<br>

@@ -42,7 +42,6 @@ Use a local Portainer admin account to access the Portainer web interface.
 {% step %}
 **Save Changes**
 
-Save the updated settings and ensure that the connection is stable.\
-
+Save the updated settings and ensure that the connection is stable.<br>
 {% endstep %}
 {% endstepper %}
